@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - 404</title>
+    <style>
+        :root {
+            /* Purple Theme Palette */
+            --primary-purple: #7c3aed;       /* Vibrant Purple */
+            --primary-hover: #6d28d9;        /* Darker Purple for Hover */
+            --bg-light-purple: #f8f5ff;      /* Very soft lavender background */
+            --text-dark: #2d253d;            /* Deep plum/dark text */
+            --text-muted: #655979;           /* Soft muted purple-gray */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light-purple);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 550px;
+            width: 100%;
+        }
+
+        /* Float animation for the 404 text */
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+            animation: float 4s ease-in-out infinite;
+            text-shadow: 0 10px 20px rgba(124, 58, 237, 0.15);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.025em;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            font-weight: 600;
+            border-radius: 12px; /* Slightly rounder, modern corners */
+            text-decoration: none;
+            transition: all 0.25s ease;
+            width: 100%;
+            max-width: 250px;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-purple);
+            color: white;
+            box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-purple);
+            border: 2px solid var(--primary-purple);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(124, 58, 237, 0.08);
+            transform: translateY(-2px);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 480px) {
+            .error-code { font-size: 6rem; }
+            h1 { font-size: 1.75rem; }
+            p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Error Code -->
+        <div class="error-code">404</div>
+        
+        <!-- Context Message -->
+        <h1>Lost in the lavender?</h1>
+        <p>The page you are looking for doesn't exist or has been moved to another coordinate.</p>
+        
+        <!-- Helpful Navigation Paths -->
+        <div class="links-container">
+            <a href="/" class="btn btn-primary">Back to Home</a>
+            <a href="/contact" class="btn btn-secondary">Report Issue</a>
+        </div>
+    </div>
+
+</body>
+</html>
